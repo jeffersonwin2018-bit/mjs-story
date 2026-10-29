@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discografía · MJ&#x27;s Story</title>
+  <meta name="description" content="Los álbumes de Michael Jackson, de Off the Wall a Xscape, en un coverflow 3D con streaming de todas sus canciones.">
+  <meta name="theme-color" content="#07060a">
+  <link rel="icon" href="assets/img/mj-logo-gold.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;900&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__mjReady)document.documentElement.classList.add('no-gsap')},6000);</script>
+  
+</head>
+<body data-page="discografia.html">
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <div class="curtain" id="curtain" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="curtain-logo" id="curtainLogo" aria-hidden="true"><img src="assets/img/mj-logo-gold.png" alt=""></div>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top" id="mainNav" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand brand" href="index.html" aria-label="MJ's Story, ir al inicio">
+          <img class="brand-logo" src="assets/img/mj-logo-gold.png" width="42" height="45" alt="Logo oficial de Michael Jackson: monograma MJ con corona">
+          <span class="brand-text">MJ's Story</span>
+        </a>
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <button class="icon-btn heehee-btn" type="button" id="heeheeBtn" data-sfx="none" aria-label="Reproducir el Hee-Hee de Michael Jackson" title="¡Hee-Hee!"><i class="bi bi-stars" aria-hidden="true"></i></button>
+          <button class="icon-btn" type="button" id="soundBtn" aria-pressed="true" aria-label="Silenciar efectos de sonido"><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+          <button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#cartModal" aria-label="Abrir carrito de compras">
+            <i class="bi bi-bag" aria-hidden="true"></i><span class="cart-badge" id="cartCount" aria-live="polite">0</span>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Mostrar u ocultar menú"><span class="navbar-toggler-icon"></span></button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="navMenu">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="discografia.html" aria-current="page">Discografía</a></li>
+            <li class="nav-item"><a class="nav-link nav-music" href="musica.html"><i class="bi bi-vinyl-fill" aria-hidden="true"></i> MJ Music</a></li>
+            <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="michael.html">Michael</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="stage-hero sh--left" data-stage style="--accent:#b86bff;--pos:76% 55%;--pos-m:74% 55%" aria-labelledby="pageTitle">
+      <div class="sh-scene">
+        <div class="sh-rig">
+          <div class="sh-plane sh-back" style="background-image:url('assets/Heros/2.jpg')" aria-hidden="true"></div>
+          <div class="sh-plane sh-photo"><img class="sh-img" src="assets/Heros/2.jpg" width="1472" height="974" alt="Zapatos negros y calcetín de cristales de Michael Jackson sobre un foco de luz en la oscuridad" fetchpriority="high"><div class="sh-light" aria-hidden="true"></div><div class="sh-sheen" aria-hidden="true"></div></div>
+          <div class="sh-plane sh-fx" aria-hidden="true"><div class="sh-beam"></div><canvas class="dust"></canvas></div>
+        </div>
+      </div>
+      <div class="sh-shade" aria-hidden="true"></div>
+      <div class="vbg-grain" aria-hidden="true"></div>
+      <div class="sh-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="sh-index" aria-hidden="true"><b>01</b><span>/ 05</span></div>
+      <div class="container sh-copy">
+        <div class="sh-copy-in">
+          <p class="eyebrow" data-enter>01 · Los álbumes</p>
+          <h1 class="sh-title split split-gold glow-title" id="pageTitle">Discografía</h1>
+          <p class="sh-lead" data-enter>De <em>Off the Wall</em> a <em>Xscape</em>: gira el coverflow y reproduce cada álbum.</p>
+          <div class="sh-meta" data-enter><span><b>7</b> álbumes</span><span><b>92</b> canciones</span><span><b>33</b> videoclips</span></div>
+          <div class="sh-cta" data-enter><a href="musica.html" class="btn-liquid btn-liquid-sm"><span>Abrir MJ Music</span><i class="bi bi-vinyl-fill" aria-hidden="true"></i></a></div>
+        </div>
+      </div>
+      <div class="sh-cue" aria-hidden="true"><span>Desliza</span><i></i></div>
+    </section>
+
+    <section class="section" aria-labelledby="cfTitle">
+      <div class="container">
+        <h2 class="visually-hidden" id="cfTitle">Selector de álbumes</h2>
+        <div class="coverflow" id="coverflow" role="group" aria-roledescription="carrusel" aria-label="Álbumes de Michael Jackson. Usa las flechas izquierda y derecha.">
+          <button type="button" class="cf-item" data-id="off-the-wall" aria-label="Off the Wall (1979)"><img src="assets/img/albums/off-the-wall.webp" width="340" height="340" alt="Portada del álbum Off the Wall de Michael Jackson"></button><button type="button" class="cf-item" data-id="thriller" aria-label="Thriller (1982)"><img src="assets/img/albums/thriller.jpg" width="340" height="340" alt="Portada del álbum Thriller de Michael Jackson"></button><button type="button" class="cf-item" data-id="bad" aria-label="Bad (1987)"><img src="assets/img/albums/bad.jpg" width="340" height="340" alt="Portada del álbum Bad de Michael Jackson"></button><button type="button" class="cf-item" data-id="dangerous" aria-label="Dangerous (1991)"><img src="assets/img/albums/dangerous.jpg" width="340" height="340" alt="Portada del álbum Dangerous de Michael Jackson"></button><button type="button" class="cf-item" data-id="history" aria-label="HIStory (1995)"><img src="assets/img/albums/history.jpg" width="340" height="340" alt="Portada del álbum HIStory de Michael Jackson"></button><button type="button" class="cf-item" data-id="invincible" aria-label="Invincible (2001)"><img src="assets/img/albums/invincible.jpg" width="340" height="340" alt="Portada del álbum Invincible de Michael Jackson"></button><button type="button" class="cf-item" data-id="xscape" aria-label="Xscape (2014)"><img src="assets/img/albums/xscape.jpg" width="340" height="340" alt="Portada del álbum Xscape de Michael Jackson"></button>
+        </div>
+        <div class="cf-nav">
+          <button type="button" class="icon-btn" id="cfPrev" aria-label="Álbum anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn" id="cfNext" aria-label="Álbum siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        </div>
+        <article class="album-detail mt-5" id="albumDetail" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <div class="marquee" data-dir="left" aria-hidden="true"><div class="marquee-track"><span class="marquee-item">Off the Wall · 1979<i>✦</i></span><span class="marquee-item fill">Thriller · 1982<i>✦</i></span><span class="marquee-item">Bad · 1987<i>✦</i></span><span class="marquee-item fill">Dangerous · 1991<i>✦</i></span><span class="marquee-item">HIStory · 1995<i>✦</i></span><span class="marquee-item fill">Invincible · 2001<i>✦</i></span><span class="marquee-item">Xscape · 2014<i>✦</i></span></div></div>
+
+    <section class="section section-alt" aria-labelledby="singlesTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Sencillos</p>
+          <h2 class="section-title" id="singlesTitle">Canciones que <em>marcaron</em> época</h2>
+          <p class="section-sub">Un sencillo emblemático por cada álbum.</p>
+        </header>
+        <div class="row g-4"><div class="col-12 col-md-6 col-lg-4 reveal"><div class="single-card"><span class="yr">1979 · Off the Wall</span><h3>Don&#x27;t Stop &#x27;Til You Get Enough</h3><p>Su primer número 1 como solista y su primer Grammy individual.</p></div></div><div class="col-12 col-md-6 col-lg-4 reveal"><div class="single-card"><span class="yr">1983 · Thriller</span><h3>Billie Jean</h3><p>Número 1 en EE. UU.; protagonista del moonwalk en Motown 25.</p></div></div><div class="col-12 col-md-6 col-lg-4 reveal"><div class="single-card"><span class="yr">1987 · Bad</span><h3>Bad</h3><p>El tema que da nombre al álbum, con video dirigido por Martin Scorsese.</p></div></div><div class="col-12 col-md-6 col-lg-4 reveal"><div class="single-card"><span class="yr">1991 · Dangerous</span><h3>Black or White</h3><p>Estreno simultáneo en el mundo; número 1 en múltiples países.</p></div></div><div class="col-12 col-md-6 col-lg-4 reveal"><div class="single-card"><span class="yr">1995 · HIStory</span><h3>Scream</h3><p>Dúo con Janet Jackson; uno de los videos más costosos de la época.</p></div></div><div class="col-12 col-md-6 col-lg-4 reveal"><div class="single-card"><span class="yr">2001 · Invincible</span><h3>You Rock My World</h3><p>Primer sencillo; un regreso lleno de ritmo y color.</p></div></div><div class="col-12 col-md-6 col-lg-4 reveal"><div class="single-card"><span class="yr">2014 · Xscape</span><h3>Love Never Felt So Good</h3><p>Primer sencillo; existe además una versión a dúo con Justin Timberlake.</p></div></div></div>
+        <p class="text-center text-secondary small mt-5 mb-0">Streaming local desde <code>assets/audio</code>: elige un álbum y el reproductor inferior seguirá con sus canciones.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="gdTitle">
+      <div class="container">
+        <header class="section-head reveal"><p class="eyebrow">Galería</p><h2 class="section-title" id="gdTitle">Momentos <em>en escena</em></h2></header>
+        <div class="gallery"><figure class="reveal"><img src="assets/img/stills/rings.jpg" width="720" height="540" loading="lazy" alt="Michael Jackson bailando sobre círculos de luz de colores"><figcaption>Anillos de luz</figcaption></figure><figure class="reveal"><img src="assets/img/stills/stage-lights.jpg" width="720" height="540" loading="lazy" alt="Michael Jackson en un escenario con luces moradas"><figcaption>Gira</figcaption></figure><figure class="reveal"><img src="assets/img/stills/fog-dance.jpg" width="720" height="540" loading="lazy" alt="Michael Jackson bailando entre niebla y luz"><figcaption>Niebla y luz</figcaption></figure><figure class="reveal"><img src="assets/img/stills/portrait.jpg" width="720" height="540" loading="lazy" alt="Retrato de Michael Jackson con chaqueta oscura"><figcaption>Retrato</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="section cinema" aria-labelledby="cineDisc">
+      <div class="container">
+        <header class="section-head reveal"><p class="eyebrow">En gira</p><h2 class="section-title" id="cineDisc">El rugido del <em>público</em></h2><p class="section-sub">Un fragmento de gira para escuchar la energía de los conciertos.</p></header>
+        <div class="reveal"><div class="theater" data-theater id="tDisc">
+          <div class="theater-stage">
+            <canvas class="theater-glow" width="32" height="18" aria-hidden="true"></canvas>
+            <div class="theater-screen">
+              <canvas class="theater-back" width="32" height="18" aria-hidden="true"></canvas>
+              <video muted playsinline preload="none" disablepictureinpicture></video>
+              <div class="theater-shade"></div><div class="vbg-grain"></div>
+              <button type="button" class="theater-big" data-sfx="none" aria-label="Reproducir video"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
+              <div class="theater-info"><span class="theater-kicker">Ahora en cartelera</span><h3 class="theater-title"></h3><p class="theater-sub"></p></div>
+              <div class="theater-bar">
+                <button type="button" class="tbtn tplay" aria-label="Pausar video" data-sfx="none"><i class="bi bi-pause-fill" aria-hidden="true"></i></button>
+                <span class="ttime" aria-hidden="true">0:00</span>
+                <input type="range" class="tseek" min="0" max="100" value="0" step="0.1" aria-label="Progreso del video">
+                <span class="tdur" aria-hidden="true">0:00</span>
+                <button type="button" class="tbtn tmute" aria-pressed="false" aria-label="Activar el audio del video"><i class="bi bi-volume-mute-fill" aria-hidden="true"></i></button>
+                <button type="button" class="tbtn tfull" aria-label="Pantalla completa"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+          <ol class="theater-list" aria-label="Más videos"><li><button type="button" data-src="assets/video/web/concert-purple.mp4" data-poster="assets/video/web/poster-concert-purple.jpg" data-start="0" data-end="0" data-title="Noche violeta" data-sub="Un concierto bajo luces moradas y destellos."><img src="assets/video/web/poster-concert-purple.jpg" width="160" height="90" loading="lazy" alt=""><span class="tl-t">Noche violeta</span><span class="tl-s">Un concierto bajo luces moradas y destellos.</span></button></li><li><button type="button" data-src="assets/video/web/concert-bad.mp4" data-poster="assets/video/web/poster-concert-bad.jpg" data-start="0" data-end="0" data-title="Bad Tour en vivo" data-sub="Voz, luces y un público entregado."><img src="assets/video/web/poster-concert-bad.jpg" width="160" height="90" loading="lazy" alt=""><span class="tl-t">Bad Tour en vivo</span><span class="tl-s">Voz, luces y un público entregado.</span></button></li></ol>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="eband eband-7" aria-label="Cada álbum, una época">
+      <div class="eband-bg" style="background-image:url('assets/img/eras/thriller/02.jpg')" role="presentation"></div>
+      <div class="container">
+        <header class="section-head reveal"><p class="eyebrow">Detrás de cada disco</p><h2 class="section-title">Una época, <em>un sonido</em></h2><p class="section-sub">Siete álbumes, siete momentos de su vida. Entra en la historia detrás de cada uno.</p></header>
+        <div class="eband-row reveal"><a class="ecard" href="historia.html#era-off-the-wall" style="--pos:50% 15%"><img src="assets/img/eras/off-the-wall/03.jpg" alt="Off the Wall" loading="lazy" decoding="async"><span class="ecard-cap"><small>1979</small><b>Off the Wall</b><em>El salto adulto</em></span></a><a class="ecard" href="historia.html#era-thriller" style="--pos:50% 20%"><img src="assets/img/eras/thriller/02.jpg" alt="Thriller" loading="lazy" decoding="async"><span class="ecard-cap"><small>1982</small><b>Thriller</b><em>El fenómeno</em></span></a><a class="ecard" href="historia.html#era-bad" style="--pos:50% 20%"><img src="assets/img/eras/bad/02.jpg" alt="Bad" loading="lazy" decoding="async"><span class="ecard-cap"><small>1987</small><b>Bad</b><em>La gira mundial</em></span></a><a class="ecard" href="historia.html#era-dangerous-history" style="--pos:50% 30%"><img src="assets/img/eras/dangerous-history/02.jpg" alt="Dangerous" loading="lazy" decoding="async"><span class="ecard-cap"><small>1991</small><b>Dangerous</b><em>New jack swing</em></span></a><a class="ecard" href="historia.html#era-dangerous-history" style="--pos:50% 25%"><img src="assets/img/eras/dangerous-history/04.jpg" alt="HIStory" loading="lazy" decoding="async"><span class="ecard-cap"><small>1995</small><b>HIStory</b><em>Escala monumental</em></span></a><a class="ecard" href="historia.html#era-invincible" style="--pos:50% 20%"><img src="assets/img/eras/invincible/02.jpg" alt="Invincible" loading="lazy" decoding="async"><span class="ecard-cap"><small>2001</small><b>Invincible</b><em>El último acto</em></span></a><a class="ecard" href="historia.html#era-xscape" style="--pos:50% 20%"><img src="assets/img/eras/xscape/05.jpg" alt="Xscape" loading="lazy" decoding="async"><span class="ecard-cap"><small>2014</small><b>Xscape</b><em>Legado eterno</em></span></a></div>
+        <div class="eband-cta reveal"><a href="historia.html" class="btn-liquid"><span>Recorrer la historia</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-12 col-lg-5">
+          <a class="brand mb-3 d-inline-flex" href="index.html" aria-label="MJ's Story, volver al inicio">
+            <img class="brand-logo" style="height:56px" src="assets/img/mj-logo-gold.png" width="52" height="56" alt="Logo oficial de Michael Jackson: monograma MJ con corona">
+            <span class="brand-text">MJ's Story</span>
+          </a>
+          <p class="footer-text">Proyecto académico de Desarrollo Web. Homenaje sin fines comerciales al Rey del Pop: museo digital, discografía interactiva y tienda de coleccionables simulada.</p>
+          <form class="newsletter newsletter-form" novalidate>
+            <label for="newsEmail" class="visually-hidden">Correo electrónico</label>
+            <input type="email" id="newsEmail" class="field" placeholder="tu@correo.com" required autocomplete="email">
+            <button type="submit" class="btn-add">Suscribirme</button>
+          </form>
+          <p class="form-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <nav class="col-6 col-lg-3" aria-label="Explorar">
+          <h2 class="footer-title">Explorar</h2>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">Inicio</a></li><li><a href="discografia.html">Discografía</a></li><li><a href="musica.html">MJ Music</a></li><li><a href="musica.html">MJ Music</a></li><li><a href="tienda.html">Tienda</a></li><li><a href="historia.html">Historia</a></li><li><a href="michael.html">Michael</a></li><li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-lg-4">
+          <h2 class="footer-title">Síguenos</h2>
+          <ul class="list-unstyled social" aria-label="Redes sociales oficiales de Michael Jackson">
+            <li><a href="https://www.instagram.com/michaeljackson/" target="_blank" rel="noopener noreferrer" aria-label="Instagram oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.youtube.com/@michaeljackson" target="_blank" rel="noopener noreferrer" aria-label="YouTube oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm" target="_blank" rel="noopener noreferrer" aria-label="Spotify oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-spotify" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.tiktok.com/@michaeljackson" target="_blank" rel="noopener noreferrer" aria-label="TikTok oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-tiktok" aria-hidden="true"></i></a></li>
+            <li><a href="https://x.com/michaeljackson" target="_blank" rel="noopener noreferrer" aria-label="X oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> MJ's Story · Proyecto final de Desarrollo Web.</p>
+        <p>Michael Jackson, su logo, imágenes y obras pertenecen a sus respectivos titulares.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+  <aside class="player" id="player" aria-label="Reproductor de música">
+    <audio id="audio" preload="none">Tu navegador no soporta el elemento de audio HTML5.</audio>
+    <audio id="heeheeAudio" src="assets/audio/hee-hee.mp3" preload="auto">Tu navegador no soporta el elemento de audio HTML5.</audio>
+    <div class="container-fluid">
+      <div class="row align-items-center g-2">
+        <div class="col-7 col-md-3 d-flex align-items-center gap-3 player-info" id="playerInfo" role="button" tabindex="0" aria-label="Abrir el reproductor completo" aria-controls="npanel">
+          <div class="player-cover" id="playerCover" aria-hidden="true"></div>
+          <div class="text-truncate">
+            <p class="player-title text-truncate" id="playerTitle">Selecciona una pista</p>
+            <p class="player-album text-truncate" id="playerAlbum">MJ's Story Radio</p>
+            <span class="eq" id="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          </div>
+        </div>
+        <div class="col-5 col-md-6">
+          <div class="player-controls">
+            <button type="button" class="ctrl ctrl-sm d-none d-sm-grid" id="shuffleBtn" aria-pressed="false" aria-label="Reproducción aleatoria"><i class="bi bi-shuffle" aria-hidden="true"></i></button>
+            <button type="button" class="ctrl" id="prevBtn" aria-label="Pista anterior"><i class="bi bi-skip-start-fill" aria-hidden="true"></i></button>
+            <button type="button" class="ctrl ctrl-main" id="playBtn" aria-label="Reproducir"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
+            <button type="button" class="ctrl" id="nextBtn" aria-label="Pista siguiente"><i class="bi bi-skip-end-fill" aria-hidden="true"></i></button>
+            <button type="button" class="ctrl ctrl-sm d-none d-sm-grid" id="repeatBtn" aria-pressed="false" aria-label="Repetir: desactivado"><i class="bi bi-repeat" aria-hidden="true"></i></button>
+          </div>
+          <div class="player-progress d-none d-md-flex">
+            <span id="curTime">0:00</span>
+            <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Progreso de la pista">
+            <span id="durTime">0:00</span>
+          </div>
+        </div>
+        <div class="col-md-3 d-none d-md-flex justify-content-end align-items-center gap-2 player-volume">
+          <button type="button" class="ctrl ctrl-sm hee-pill" id="heeheeBtn2" data-sfx="none" aria-label="Reproducir el Hee-Hee de Michael Jackson" title="¡Hee-Hee!"><i class="bi bi-stars" aria-hidden="true"></i></button>
+          <button type="button" class="ctrl ctrl-sm" id="queueBtn" aria-label="Abrir la cola de reproducción" aria-controls="npanel"><i class="bi bi-music-note-list" aria-hidden="true"></i></button>
+          <button type="button" class="ctrl ctrl-sm" id="expandBtn" aria-label="Abrir el reproductor completo" aria-controls="npanel" aria-expanded="false"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></button>
+          <button type="button" class="ctrl" id="muteBtn" aria-label="Silenciar"><i class="bi bi-volume-up" aria-hidden="true"></i></button>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8" aria-label="Volumen">
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="npanel" id="npanel" aria-label="Reproductor completo" aria-hidden="true">
+    <div class="np-top">
+      <div class="np-tabs" role="tablist" aria-label="Secciones del reproductor">
+        <button type="button" role="tab" id="tabNow" aria-selected="true" aria-controls="npNow" data-tab="now">Ahora</button>
+        <button type="button" role="tab" id="tabQueue" aria-selected="false" aria-controls="npQueue" data-tab="queue" tabindex="-1">Cola</button>
+        <button type="button" role="tab" id="tabLib" aria-selected="false" aria-controls="npLib" data-tab="lib" tabindex="-1">Listas</button>
+      </div>
+      <button type="button" class="np-close" id="npClose" aria-label="Cerrar el reproductor completo"><i class="bi bi-chevron-down d-md-none" aria-hidden="true"></i><i class="bi bi-x-lg d-none d-md-inline" aria-hidden="true"></i></button>
+    </div>
+    <div class="np-body">
+      <section class="np-view is-on" id="npNow" role="tabpanel" aria-labelledby="tabNow"></section>
+      <section class="np-view" id="npQueue" role="tabpanel" aria-labelledby="tabQueue" hidden></section>
+      <section class="np-view" id="npLib" role="tabpanel" aria-labelledby="tabLib" hidden></section>
+    </div>
+  </aside>
+  <div class="np-backdrop" id="npBackdrop" hidden></div>
+  <div class="pl-menu" id="plMenu" role="menu" aria-label="Opciones de la canción" hidden></div>
+
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content modal-lux">
+        <div class="modal-header">
+          <h2 class="modal-title" id="cartModalLabel"><i class="bi bi-bag" aria-hidden="true"></i> Tu carrito</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar carrito"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="cart-list list-unstyled" id="cartList" aria-live="polite"></ul>
+          <p class="cart-empty" id="cartEmpty">Tu carrito está vacío. Explora la <a href="tienda.html">Tienda</a>.</p>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <p class="cart-total mb-0">Total: <strong id="cartTotal">$0</strong></p>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn-ghost-sm" id="clearCart">Vaciar</button>
+            <button type="button" class="btn-liquid btn-liquid-sm" id="checkoutBtn" data-sfx="none"><span>Finalizar compra</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content modal-lux text-center p-4">
+        <svg class="success-check" id="successCheck" viewBox="0 0 52 52" width="84" height="84" aria-hidden="true">
+          <circle cx="26" cy="26" r="24" fill="none" stroke="#d4af37" stroke-width="2"/>
+          <path d="M15 27 L23 35 L38 18" fill="none" stroke="#f4d58d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h2 class="modal-title mt-3" id="successLabel">¡Añadido!</h2>
+        <p class="mb-3 text-secondary" id="successMsg">Listo.</p>
+        <div class="d-flex gap-2 justify-content-center">
+          <button type="button" class="btn-ghost-sm" data-bs-dismiss="modal">Seguir</button>
+          <button type="button" class="btn-liquid btn-liquid-sm" id="goCart"><span>Ver carrito</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div class="toast toast-lux" id="toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-body d-flex align-items-center gap-2"><i class="bi bi-check2-circle" aria-hidden="true"></i><span id="toastMsg">Listo</span></div>
+    </div>
+  </div>
+
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/stories.js"></script>
+  <script src="js/clips.js"></script>
+  <script src="js/sfx.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

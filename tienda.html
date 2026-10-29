@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda · MJ&#x27;s Story</title>
+  <meta name="description" content="Collector&#x27;s Vault: casacas, fedoras, guantes de cristales y vinilos de colección de Michael Jackson (tienda simulada).">
+  <meta name="theme-color" content="#07060a">
+  <link rel="icon" href="assets/img/mj-logo-gold.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;900&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__mjReady)document.documentElement.classList.add('no-gsap')},6000);</script>
+  
+</head>
+<body data-page="tienda.html">
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <div class="curtain" id="curtain" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="curtain-logo" id="curtainLogo" aria-hidden="true"><img src="assets/img/mj-logo-gold.png" alt=""></div>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top" id="mainNav" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand brand" href="index.html" aria-label="MJ's Story, ir al inicio">
+          <img class="brand-logo" src="assets/img/mj-logo-gold.png" width="42" height="45" alt="Logo oficial de Michael Jackson: monograma MJ con corona">
+          <span class="brand-text">MJ's Story</span>
+        </a>
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <button class="icon-btn heehee-btn" type="button" id="heeheeBtn" data-sfx="none" aria-label="Reproducir el Hee-Hee de Michael Jackson" title="¡Hee-Hee!"><i class="bi bi-stars" aria-hidden="true"></i></button>
+          <button class="icon-btn" type="button" id="soundBtn" aria-pressed="true" aria-label="Silenciar efectos de sonido"><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+          <button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#cartModal" aria-label="Abrir carrito de compras">
+            <i class="bi bi-bag" aria-hidden="true"></i><span class="cart-badge" id="cartCount" aria-live="polite">0</span>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Mostrar u ocultar menú"><span class="navbar-toggler-icon"></span></button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="navMenu">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="discografia.html">Discografía</a></li>
+            <li class="nav-item"><a class="nav-link nav-music" href="musica.html"><i class="bi bi-vinyl-fill" aria-hidden="true"></i> MJ Music</a></li>
+            <li class="nav-item"><a class="nav-link active" href="tienda.html" aria-current="page">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="michael.html">Michael</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="stage-hero sh--left" data-stage style="--accent:#ffb347;--pos:50% 46%;--pos-m:52% 50%" aria-labelledby="pageTitle">
+      <div class="sh-scene">
+        <div class="sh-rig">
+          <div class="sh-plane sh-back" style="background-image:url('assets/Heros/3.jpg')" aria-hidden="true"></div>
+          <div class="sh-plane sh-photo"><img class="sh-img" src="assets/Heros/3.jpg" width="1472" height="974" alt="Michael Jackson de espaldas en el escenario frente a un estadio lleno en Rotterdam" fetchpriority="high"><div class="sh-light" aria-hidden="true"></div><div class="sh-sheen" aria-hidden="true"></div></div>
+          <div class="sh-plane sh-fx" aria-hidden="true"><div class="sh-beam"></div><canvas class="dust"></canvas></div>
+        </div>
+      </div>
+      <div class="sh-shade" aria-hidden="true"></div>
+      <div class="vbg-grain" aria-hidden="true"></div>
+      <div class="sh-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="sh-index" aria-hidden="true"><b>02</b><span>/ 05</span></div>
+      <div class="container sh-copy">
+        <div class="sh-copy-in">
+          <p class="eyebrow" data-enter>02 · Collector&#x27;s Vault</p>
+          <h1 class="sh-title split split-gold glow-title" id="pageTitle">The Vault</h1>
+          <p class="sh-lead" data-enter>Réplicas de edición limitada y vinilos inspirados en sus momentos más legendarios.</p>
+          <div class="sh-meta" data-enter><span><b>Edición</b> limitada</span><span><b>Vista</b> rápida 3D</span><span><b>Envío</b> simulado</span></div>
+        </div>
+      </div>
+      <div class="sh-cue" aria-hidden="true"><span>Desliza</span><i></i></div>
+    </section>
+
+    <section class="section" aria-labelledby="perksTitle" style="padding-bottom:0">
+      <div class="container">
+        <h2 class="visually-hidden" id="perksTitle">Ventajas de compra</h2>
+        <div class="row g-4"><div class="col-6 col-lg-3 reveal"><div class="perk"><i class="bi bi-truck" aria-hidden="true"></i><h3>Envío asegurado</h3><p>A todo el mundo en 3 a 7 días hábiles.</p></div></div><div class="col-6 col-lg-3 reveal"><div class="perk"><i class="bi bi-patch-check" aria-hidden="true"></i><h3>Certificado</h3><p>Cada pieza viene numerada y autenticada.</p></div></div><div class="col-6 col-lg-3 reveal"><div class="perk"><i class="bi bi-arrow-repeat" aria-hidden="true"></i><h3>30 días</h3><p>Devoluciones sin complicaciones.</p></div></div><div class="col-6 col-lg-3 reveal"><div class="perk"><i class="bi bi-gift" aria-hidden="true"></i><h3>Empaque de museo</h3><p>Caja de presentación incluida.</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catTitle">
+      <div class="container">
+        <header class="section-head left reveal"><p class="eyebrow">Catálogo</p><h2 class="section-title" id="catTitle">Piezas de <em>colección</em></h2></header>
+        <div class="shop-bar">
+          <div class="chips" role="group" aria-label="Filtrar por categoría">
+            <button type="button" class="chip-btn is-on" data-filter="all" aria-pressed="true">Todo</button>
+            <button type="button" class="chip-btn" data-filter="ropa" aria-pressed="false">Ropa</button>
+            <button type="button" class="chip-btn" data-filter="accesorios" aria-pressed="false">Accesorios</button>
+            <button type="button" class="chip-btn" data-filter="vinilos" aria-pressed="false">Vinilos</button>
+          </div>
+          <div class="shop-tools">
+            <label class="visually-hidden" for="shopSearch">Buscar productos</label>
+            <input type="search" class="field" id="shopSearch" placeholder="Buscar…" autocomplete="off">
+            <label class="visually-hidden" for="shopSort">Ordenar productos</label>
+            <select class="field" id="shopSort"><option value="featured">Destacados</option><option value="price-asc">Precio: menor a mayor</option><option value="price-desc">Precio: mayor a menor</option><option value="name">Nombre A–Z</option></select>
+          </div>
+        </div>
+        <p class="text-secondary small" id="shopCount" aria-live="polite">10 piezas</p>
+        <div class="row g-4" id="productGrid">
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="ropa" data-name="Casaca Roja Thriller" data-tags="chaqueta thriller roja cuero" data-price="349" data-order="0">
+            <div class="card product-card" data-id="thriller-jacket" data-name="Casaca Roja Thriller" data-price="349" data-sizes="S|M|L|XL" data-long="Réplica inspirada en la chaqueta del cortometraje de Thriller: cuero sintético premium, costuras reforzadas, forro satinado y las franjas en V características. Numerada y con certificado de autenticidad.">
+              <div class="product-stage" style="--glow:#d81e2c">
+                <span class="product-tag">Edición 40 aniversario</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Casaca Roja Thriller en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <svg class="product-svg" viewBox="0 0 200 200" role="img" aria-label="Ilustración de la casaca roja de Thriller"><path d="M70 40 L100 52 L130 40 L165 62 L182 150 L160 156 L150 100 L148 172 L52 172 L50 100 L40 156 L18 150 L35 62 Z" fill="#c4161f"/><path d="M100 52 L84 172 M100 52 L116 172" stroke="#1a0b0d" stroke-width="5"/><path d="M52 92 L80 82 M148 92 L120 82 M54 116 L82 106 M146 116 L118 106" stroke="#1a0b0d" stroke-width="7" stroke-linecap="round"/><path d="M70 40 L100 52 L130 40" stroke="#f4d58d" stroke-width="2" fill="none"/></svg>
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Casaca Roja Thriller</h3>
+                <p class="product-desc">Cuero sintético premium con las icónicas franjas en V.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Casaca Roja Thriller</legend><input type="radio" class="btn-check" name="size-thriller-jacket" id="thriller-jacket-0" value="S"><label class="btn btn-size" for="thriller-jacket-0">S</label><input type="radio" class="btn-check" name="size-thriller-jacket" id="thriller-jacket-1" value="M" checked><label class="btn btn-size" for="thriller-jacket-1">M</label><input type="radio" class="btn-check" name="size-thriller-jacket" id="thriller-jacket-2" value="L"><label class="btn btn-size" for="thriller-jacket-2">L</label><input type="radio" class="btn-check" name="size-thriller-jacket" id="thriller-jacket-3" value="XL"><label class="btn btn-size" for="thriller-jacket-3">XL</label></fieldset>
+                <div class="product-foot"><p class="price">$349</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="accesorios" data-name="Fedora Smooth Criminal" data-tags="sombrero fedora blanco smooth criminal" data-price="129" data-order="1">
+            <div class="card product-card" data-id="fedora" data-name="Fedora Smooth Criminal" data-price="129" data-sizes="56 cm|58 cm|60 cm" data-long="Fedora de fieltro de lana con banda de satén negro, ala corta y forma estructurada. Un guiño directo al look de Smooth Criminal. Incluye caja de presentación.">
+              <div class="product-stage" style="--glow:#e9e4d8">
+                <span class="product-tag">Bestseller</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Fedora Smooth Criminal en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <svg class="product-svg" viewBox="0 0 200 200" role="img" aria-label="Ilustración de la fedora blanca"><ellipse cx="100" cy="128" rx="84" ry="22" fill="#f1ece0"/><path d="M50 126 C52 80 64 58 100 58 C136 58 148 80 150 126 Z" fill="#fbf8f1"/><path d="M80 62 C92 74 108 74 120 62" stroke="#d9d2c2" stroke-width="4" fill="none"/><path d="M51 108 C80 118 120 118 149 108 L150 124 C120 134 80 134 50 124 Z" fill="#141114"/></svg>
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Fedora Smooth Criminal</h3>
+                <p class="product-desc">Fieltro de lana blanco con banda de satén negro.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Fedora Smooth Criminal</legend><input type="radio" class="btn-check" name="size-fedora" id="fedora-0" value="56 cm"><label class="btn btn-size" for="fedora-0">56 cm</label><input type="radio" class="btn-check" name="size-fedora" id="fedora-1" value="58 cm" checked><label class="btn btn-size" for="fedora-1">58 cm</label><input type="radio" class="btn-check" name="size-fedora" id="fedora-2" value="60 cm"><label class="btn btn-size" for="fedora-2">60 cm</label></fieldset>
+                <div class="product-foot"><p class="price">$129</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="accesorios" data-name="Guante de Cristales" data-tags="guante cristales motown billie jean" data-price="199" data-order="2">
+            <div class="card product-card" data-id="crystal-glove" data-name="Guante de Cristales" data-price="199" data-sizes="S|M|L" data-long="Guante de la mano derecha con más de 1.200 cristales aplicados a mano, inspirado en la icónica actuación de Motown 25. Edición limitada y numerada.">
+              <div class="product-stage" style="--glow:#bfe3ff">
+                <span class="product-tag">Hecho a mano</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Guante de Cristales en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <svg class="product-svg" viewBox="0 0 200 200" role="img" aria-label="Ilustración del guante de cristales"><defs><pattern id="sparkle" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#dfe6ee"/><circle cx="5" cy="5" r="2.6" fill="#ffffff"/></pattern></defs><rect x="62" y="40" width="18" height="70" rx="9" fill="url(#sparkle)"/><rect x="84" y="28" width="18" height="82" rx="9" fill="url(#sparkle)"/><rect x="106" y="32" width="18" height="78" rx="9" fill="url(#sparkle)"/><rect x="128" y="46" width="16" height="66" rx="8" fill="url(#sparkle)"/><rect x="30" y="98" width="18" height="52" rx="9" transform="rotate(-38 39 124)" fill="url(#sparkle)"/><rect x="60" y="92" width="86" height="80" rx="26" fill="url(#sparkle)"/><rect x="70" y="162" width="70" height="18" rx="4" fill="#cfd8e2"/></svg>
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Guante de Cristales</h3>
+                <p class="product-desc">Más de 1.200 cristales aplicados a mano.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Guante de Cristales</legend><input type="radio" class="btn-check" name="size-crystal-glove" id="crystal-glove-0" value="S"><label class="btn btn-size" for="crystal-glove-0">S</label><input type="radio" class="btn-check" name="size-crystal-glove" id="crystal-glove-1" value="M" checked><label class="btn btn-size" for="crystal-glove-1">M</label><input type="radio" class="btn-check" name="size-crystal-glove" id="crystal-glove-2" value="L"><label class="btn btn-size" for="crystal-glove-2">L</label></fieldset>
+                <div class="product-foot"><p class="price">$199</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="ropa" data-name="Mocasines Moonwalk" data-tags="zapatos mocasines moonwalk calcetines" data-price="189" data-order="3">
+            <div class="card product-card" data-id="loafers" data-name="Mocasines Moonwalk" data-price="189" data-sizes="40|42|44" data-long="Mocasines de charol negro con suela de deslizamiento suave, pensados para el moonwalk. Se entregan con un par de calcetines blancos de brillo sutil.">
+              <div class="product-stage" style="--glow:#f4d58d">
+                <span class="product-tag">Con calcetines brillo</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Mocasines Moonwalk en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <svg class="product-svg" viewBox="0 0 200 200" role="img" aria-label="Ilustración de los mocasines negros con calcetín blanco"><rect x="62" y="40" width="34" height="74" rx="6" fill="#f7f4ee"/><path d="M58 108 L100 108 C130 110 172 122 178 140 C180 150 170 156 150 156 L58 156 C48 156 44 146 46 132 Z" fill="#111015"/><path d="M46 150 L178 150" stroke="#f4d58d" stroke-width="3"/><path d="M100 116 C112 118 124 122 132 128" stroke="#2b2930" stroke-width="4" fill="none"/></svg>
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Mocasines Moonwalk</h3>
+                <p class="product-desc">Charol negro con suela deslizante.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Mocasines Moonwalk</legend><input type="radio" class="btn-check" name="size-loafers" id="loafers-0" value="40"><label class="btn btn-size" for="loafers-0">40</label><input type="radio" class="btn-check" name="size-loafers" id="loafers-1" value="42" checked><label class="btn btn-size" for="loafers-1">42</label><input type="radio" class="btn-check" name="size-loafers" id="loafers-2" value="44"><label class="btn btn-size" for="loafers-2">44</label></fieldset>
+                <div class="product-foot"><p class="price">$189</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="vinilos" data-name="Vinilo Thriller 180 g" data-tags="vinilo lp thriller 1982" data-price="59" data-order="4">
+            <div class="card product-card" data-id="vinyl-thriller" data-name="Vinilo Thriller 180 g" data-price="59" data-sizes="Estándar|Picture Disc" data-long="Edición en vinilo de 180 gramos con remasterización analógica, carpeta gatefold y libreto fotográfico. El álbum más vendido de la historia, como debe escucharse.">
+              <div class="product-stage" style="--glow:#d81e2c">
+                <span class="product-tag">Audiófilo</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Vinilo Thriller 180 g en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <img class="product-cover" src="assets/img/stills/stage-lights.jpg" width="300" height="300" loading="lazy" alt="Portada del vinilo Vinilo Thriller 180 g">
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Vinilo Thriller 180 g</h3>
+                <p class="product-desc">Remasterización analógica con libreto.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Vinilo Thriller 180 g</legend><input type="radio" class="btn-check" name="size-vinyl-thriller" id="vinyl-thriller-0" value="Estándar"><label class="btn btn-size" for="vinyl-thriller-0">Estándar</label><input type="radio" class="btn-check" name="size-vinyl-thriller" id="vinyl-thriller-1" value="Picture Disc" checked><label class="btn btn-size" for="vinyl-thriller-1">Picture Disc</label></fieldset>
+                <div class="product-foot"><p class="price">$59</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="vinilos" data-name="Vinilo Bad 35th" data-tags="vinilo lp bad 1987" data-price="64" data-order="5">
+            <div class="card product-card" data-id="vinyl-bad" data-name="Vinilo Bad 35th" data-price="64" data-sizes="Estándar|Deluxe 2LP" data-long="Doble LP con acabado metalizado, demos y versiones de estudio seleccionadas. Incluye póster desplegable.">
+              <div class="product-stage" style="--glow:#9aa0aa">
+                <span class="product-tag">Nuevo</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Vinilo Bad 35th en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <img class="product-cover" src="assets/img/albums/bad.jpg" width="300" height="300" loading="lazy" alt="Portada del vinilo Vinilo Bad 35th">
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Vinilo Bad 35th</h3>
+                <p class="product-desc">Doble LP con portada metalizada.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Vinilo Bad 35th</legend><input type="radio" class="btn-check" name="size-vinyl-bad" id="vinyl-bad-0" value="Estándar"><label class="btn btn-size" for="vinyl-bad-0">Estándar</label><input type="radio" class="btn-check" name="size-vinyl-bad" id="vinyl-bad-1" value="Deluxe 2LP" checked><label class="btn btn-size" for="vinyl-bad-1">Deluxe 2LP</label></fieldset>
+                <div class="product-foot"><p class="price">$64</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="vinilos" data-name="Vinilo Off the Wall" data-tags="vinilo lp off the wall 1979" data-price="54" data-order="6">
+            <div class="card product-card" data-id="vinyl-otw" data-name="Vinilo Off the Wall" data-price="54" data-sizes="Estándar|Color dorado" data-long="El álbum que lo cambió todo, prensado en vinilo negro o dorado translúcido. Portada con laminado mate.">
+              <div class="product-stage" style="--glow:#c9862b">
+                <span class="product-tag">Clásico</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Vinilo Off the Wall en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <img class="product-cover" src="assets/img/albums/off-the-wall.webp" width="300" height="300" loading="lazy" alt="Portada del vinilo Vinilo Off the Wall">
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Vinilo Off the Wall</h3>
+                <p class="product-desc">Disco-funk en su mejor forma.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Vinilo Off the Wall</legend><input type="radio" class="btn-check" name="size-vinyl-otw" id="vinyl-otw-0" value="Estándar"><label class="btn btn-size" for="vinyl-otw-0">Estándar</label><input type="radio" class="btn-check" name="size-vinyl-otw" id="vinyl-otw-1" value="Color dorado" checked><label class="btn btn-size" for="vinyl-otw-1">Color dorado</label></fieldset>
+                <div class="product-foot"><p class="price">$54</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="vinilos" data-name="Vinilo Dangerous" data-tags="vinilo lp dangerous 1991" data-price="62" data-order="7">
+            <div class="card product-card" data-id="vinyl-dangerous" data-name="Vinilo Dangerous" data-price="62" data-sizes="Estándar|Deluxe 2LP" data-long="Doble LP con la portada de Mark Ryden a tamaño 12 pulgadas, ideal para enmarcar. Prensado en 180 gramos.">
+              <div class="product-stage" style="--glow:#e2b04a">
+                <span class="product-tag">Arte Mark Ryden</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Vinilo Dangerous en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <img class="product-cover" src="assets/img/albums/dangerous.jpg" width="300" height="300" loading="lazy" alt="Portada del vinilo Vinilo Dangerous">
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Vinilo Dangerous</h3>
+                <p class="product-desc">La obra de Mark Ryden a gran formato.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Vinilo Dangerous</legend><input type="radio" class="btn-check" name="size-vinyl-dangerous" id="vinyl-dangerous-0" value="Estándar"><label class="btn btn-size" for="vinyl-dangerous-0">Estándar</label><input type="radio" class="btn-check" name="size-vinyl-dangerous" id="vinyl-dangerous-1" value="Deluxe 2LP" checked><label class="btn btn-size" for="vinyl-dangerous-1">Deluxe 2LP</label></fieldset>
+                <div class="product-foot"><p class="price">$62</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="vinilos" data-name="Vinilo HIStory" data-tags="vinilo lp history 1995" data-price="69" data-order="8">
+            <div class="card product-card" data-id="vinyl-history" data-name="Vinilo HIStory" data-price="69" data-sizes="Estándar|Deluxe 3LP" data-long="Edición de colección del álbum doble, con libreto de tapa dura y láminas. El peso del legado, en vinilo.">
+              <div class="product-stage" style="--glow:#8a3a3a">
+                <span class="product-tag">Doble álbum</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Vinilo HIStory en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <img class="product-cover" src="assets/img/albums/history.jpg" width="300" height="300" loading="lazy" alt="Portada del vinilo Vinilo HIStory">
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Vinilo HIStory</h3>
+                <p class="product-desc">Pasado, presente y futuro en tres caras.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Vinilo HIStory</legend><input type="radio" class="btn-check" name="size-vinyl-history" id="vinyl-history-0" value="Estándar"><label class="btn btn-size" for="vinyl-history-0">Estándar</label><input type="radio" class="btn-check" name="size-vinyl-history" id="vinyl-history-1" value="Deluxe 3LP" checked><label class="btn btn-size" for="vinyl-history-1">Deluxe 3LP</label></fieldset>
+                <div class="product-foot"><p class="price">$69</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+          <article class="col-12 col-sm-6 col-lg-4 shop-item reveal" data-cat="vinilos" data-name="Vinilo Invincible" data-tags="vinilo lp invincible 2001" data-price="52" data-order="9">
+            <div class="card product-card" data-id="vinyl-invincible" data-name="Vinilo Invincible" data-price="52" data-sizes="Estándar|Plata translúcido" data-long="El último álbum de estudio en vida de Michael, en vinilo plata translúcido con carpeta doble.">
+              <div class="product-stage" style="--glow:#6fb3d8">
+                <span class="product-tag">Edición plata</span>
+                <button type="button" class="wish" aria-pressed="false" aria-label="Guardar Vinilo Invincible en favoritos"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                <img class="product-cover" src="assets/img/albums/invincible.jpg" width="300" height="300" loading="lazy" alt="Portada del vinilo Vinilo Invincible">
+                <button type="button" class="quick">Vista rápida</button>
+              </div>
+              <div class="card-body">
+                <h3 class="product-name">Vinilo Invincible</h3>
+                <p class="product-desc">El último álbum de estudio, en plata.</p>
+                <fieldset class="size-picker"><legend class="visually-hidden">Selecciona talla o edición de Vinilo Invincible</legend><input type="radio" class="btn-check" name="size-vinyl-invincible" id="vinyl-invincible-0" value="Estándar"><label class="btn btn-size" for="vinyl-invincible-0">Estándar</label><input type="radio" class="btn-check" name="size-vinyl-invincible" id="vinyl-invincible-1" value="Plata translúcido" checked><label class="btn btn-size" for="vinyl-invincible-1">Plata translúcido</label></fieldset>
+                <div class="product-foot"><p class="price">$52</p><button type="button" class="btn-add"><i class="bi bi-bag-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="shop-empty" id="shopEmpty" hidden>No encontramos piezas con ese filtro. Prueba con otra búsqueda.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-label="Edición limitada">
+      <div class="band-bg" data-parallax="0.2" style="background-image:url('assets/img/stills/stage-lights.jpg')" role="presentation"></div>
+      <div class="container">
+        <p class="eyebrow">Edición limitada</p>
+        <blockquote class="reveal"><p class="mb-0">Cada pieza es una <em>escena</em> que puedes tener en casa.</p><cite>Collector's Vault</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faqTitle">
+      <div class="container">
+        <header class="section-head reveal"><p class="eyebrow">Ayuda</p><h2 class="section-title" id="faqTitle">Preguntas <em>frecuentes</em></h2></header>
+        <div class="row justify-content-center"><div class="col-12 col-lg-9"><div class="accordion faq" id="faqAcc"><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq0" aria-expanded="false" aria-controls="faq0">¿Esta tienda procesa pagos reales?</button></h3><div id="faq0" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">No. Es una simulación académica: el carrito, el pedido y el pago son ficticios y no se envía ninguna información.</div></div></div><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">¿Los productos son oficiales?</button></h3><div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Los artículos son ilustrativos para un proyecto de Desarrollo Web. En una tienda real, cada pieza vendría con licencia oficial y certificado.</div></div></div><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">¿Cómo funcionan las tallas?</button></h3><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Elige la talla o edición en cada tarjeta antes de agregar. Verás el detalle en el carrito, donde puedes cambiar cantidades.</div></div></div><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">¿Se guarda mi carrito?</button></h3><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Sí, en el almacenamiento local de tu navegador, así que se mantiene al moverte entre las páginas del sitio.</div></div></div><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">¿Puedo guardar favoritos?</button></h3><div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Pulsa el corazón de cualquier producto. Tus favoritos también se guardan en tu navegador.</div></div></div></div></div></div>
+      </div>
+    </section>
+
+    <section class="section cinema" aria-labelledby="cineShop">
+      <div class="container">
+        <header class="section-head reveal"><p class="eyebrow">Estilo en movimiento</p><h2 class="section-title" id="cineShop">El look, <em>en acción</em></h2><p class="section-sub">Mira cómo se mueven la camisa azul, los calcetines blancos y los mocasines que inspiran la colección.</p></header>
+        <div class="reveal"><div class="theater" data-theater id="tShop">
+          <div class="theater-stage">
+            <canvas class="theater-glow" width="32" height="18" aria-hidden="true"></canvas>
+            <div class="theater-screen">
+              <canvas class="theater-back" width="32" height="18" aria-hidden="true"></canvas>
+              <video muted playsinline preload="none" disablepictureinpicture></video>
+              <div class="theater-shade"></div><div class="vbg-grain"></div>
+              <button type="button" class="theater-big" data-sfx="none" aria-label="Reproducir video"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
+              <div class="theater-info"><span class="theater-kicker">Ahora en cartelera</span><h3 class="theater-title"></h3><p class="theater-sub"></p></div>
+              <div class="theater-bar">
+                <button type="button" class="tbtn tplay" aria-label="Pausar video" data-sfx="none"><i class="bi bi-pause-fill" aria-hidden="true"></i></button>
+                <span class="ttime" aria-hidden="true">0:00</span>
+                <input type="range" class="tseek" min="0" max="100" value="0" step="0.1" aria-label="Progreso del video">
+                <span class="tdur" aria-hidden="true">0:00</span>
+                <button type="button" class="tbtn tmute" aria-pressed="false" aria-label="Activar el audio del video"><i class="bi bi-volume-mute-fill" aria-hidden="true"></i></button>
+                <button type="button" class="tbtn tfull" aria-label="Pantalla completa"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+          <ol class="theater-list" aria-label="Más videos"><li><button type="button" data-src="assets/video/web/thriller.mp4" data-poster="assets/video/web/poster-thriller.jpg" data-start="0" data-end="0" data-title="Thriller" data-sub="La danza que redefinió el videoclip."><img src="assets/video/web/poster-thriller.jpg" width="160" height="90" loading="lazy" alt=""><span class="tl-t">Thriller</span><span class="tl-s">La danza que redefinió el videoclip.</span></button></li><li><button type="button" data-src="assets/video/web/beat-it.mp4" data-poster="assets/video/web/poster-beat-it.jpg" data-start="0" data-end="0" data-title="Beat It" data-sub="Chaqueta roja y baile entre la niebla de la calle."><img src="assets/video/web/poster-beat-it.jpg" width="160" height="90" loading="lazy" alt=""><span class="tl-t">Beat It</span><span class="tl-s">Chaqueta roja y baile entre la niebla de la calle.</span></button></li></ol>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="eband eband-3" aria-label="Cada pieza nace de un momento">
+      <div class="eband-bg" style="background-image:url('assets/img/eras/thriller/04.jpg')" role="presentation"></div>
+      <div class="container">
+        <header class="section-head reveal"><p class="eyebrow">De la escena a la vitrina</p><h2 class="section-title">Cada pieza, <em>un momento</em></h2><p class="section-sub">El guante de cristales, la chaqueta de hebillas, el uniforme militar: la colección recuerda instantes reales de su carrera.</p></header>
+        <div class="eband-row reveal"><a class="ecard" href="historia.html#era-thriller" style="--pos:50% 25%"><img src="assets/img/eras/thriller/04.jpg" alt="Motown 25" loading="lazy" decoding="async"><span class="ecard-cap"><small>1983</small><b>Motown 25</b><em>La noche del guante y el moonwalk</em></span></a><a class="ecard" href="historia.html#era-bad" style="--pos:50% 20%"><img src="assets/img/eras/bad/02.jpg" alt="Era Bad" loading="lazy" decoding="async"><span class="ecard-cap"><small>1987</small><b>Era Bad</b><em>Cuero, hebillas y plata</em></span></a><a class="ecard" href="historia.html#era-thriller" style="--pos:50% 25%"><img src="assets/img/eras/thriller/03.jpg" alt="Grammys" loading="lazy" decoding="async"><span class="ecard-cap"><small>1984</small><b>Grammys</b><em>Ocho premios en una noche</em></span></a></div>
+        <div class="eband-cta reveal"><a href="tienda.html#catTitle" class="btn-liquid"><span>Ver la colección</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="quickModal" tabindex="-1" aria-labelledby="quickName" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-lux">
+        <div class="modal-header"><h2 class="modal-title" id="quickName">Producto</h2><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar vista rápida"></button></div>
+        <div class="modal-body">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-md-6"><div class="product-modal-img" id="quickImg"></div></div>
+            <div class="col-12 col-md-6">
+              <p class="price mb-2" id="quickPrice">$0</p>
+              <p class="text-secondary" id="quickLong"></p>
+              <label class="small text-uppercase" style="letter-spacing:.2em;color:var(--gold)" for="quickSize">Talla / edición</label>
+              <select class="field w-100 my-2" id="quickSize"></select>
+              <button type="button" class="btn-liquid mt-3" id="quickAdd" data-sfx="none"><span>Agregar al carrito</span><i class="bi bi-bag-plus" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-12 col-lg-5">
+          <a class="brand mb-3 d-inline-flex" href="index.html" aria-label="MJ's Story, volver al inicio">
+            <img class="brand-logo" style="height:56px" src="assets/img/mj-logo-gold.png" width="52" height="56" alt="Logo oficial de Michael Jackson: monograma MJ con corona">
+            <span class="brand-text">MJ's Story</span>
+          </a>
+          <p class="footer-text">Proyecto académico de Desarrollo Web. Homenaje sin fines comerciales al Rey del Pop: museo digital, discografía interactiva y tienda de coleccionables simulada.</p>
+          <form class="newsletter newsletter-form" novalidate>
+            <label for="newsEmail" class="visually-hidden">Correo electrónico</label>
+            <input type="email" id="newsEmail" class="field" placeholder="tu@correo.com" required autocomplete="email">
+            <button type="submit" class="btn-add">Suscribirme</button>
+          </form>
+          <p class="form-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <nav class="col-6 col-lg-3" aria-label="Explorar">
+          <h2 class="footer-title">Explorar</h2>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">Inicio</a></li><li><a href="discografia.html">Discografía</a></li><li><a href="musica.html">MJ Music</a></li><li><a href="tienda.html">Tienda</a></li><li><a href="historia.html">Historia</a></li><li><a href="michael.html">Michael</a></li><li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-lg-4">
+          <h2 class="footer-title">Síguenos</h2>
+          <ul class="list-unstyled social" aria-label="Redes sociales oficiales de Michael Jackson">
+            <li><a href="https://www.instagram.com/michaeljackson/" target="_blank" rel="noopener noreferrer" aria-label="Instagram oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.youtube.com/@michaeljackson" target="_blank" rel="noopener noreferrer" aria-label="YouTube oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm" target="_blank" rel="noopener noreferrer" aria-label="Spotify oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-spotify" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.tiktok.com/@michaeljackson" target="_blank" rel="noopener noreferrer" aria-label="TikTok oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-tiktok" aria-hidden="true"></i></a></li>
+            <li><a href="https://x.com/michaeljackson" target="_blank" rel="noopener noreferrer" aria-label="X oficial de Michael Jackson (abre en una pestaña nueva)"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> MJ's Story · Proyecto final de Desarrollo Web.</p>
+        <p>Michael Jackson, su logo, imágenes y obras pertenecen a sus respectivos titulares.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+  <aside class="player" id="player" aria-label="Reproductor de música">
+    <audio id="audio" preload="none">Tu navegador no soporta el elemento de audio HTML5.</audio>
+    <audio id="heeheeAudio" src="assets/audio/hee-hee.mp3" preload="auto">Tu navegador no soporta el elemento de audio HTML5.</audio>
+    <div class="container-fluid">
+      <div class="row align-items-center g-2">
+        <div class="col-7 col-md-3 d-flex align-items-center gap-3 player-info" id="playerInfo" role="button" tabindex="0" aria-label="Abrir el reproductor completo" aria-controls="npanel">
+          <div class="player-cover" id="playerCover" aria-hidden="true"></div>
+          <div class="text-truncate">
+            <p class="player-title text-truncate" id="playerTitle">Selecciona una pista</p>
+            <p class="player-album text-truncate" id="playerAlbum">MJ's Story Radio</p>
+            <span class="eq" id="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          </div>
+        </div>
+        <div class="col-5 col-md-6">
+          <div class="player-controls">
+            <button type="button" class="ctrl ctrl-sm d-none d-sm-grid" id="shuffleBtn" aria-pressed="false" aria-label="Reproducción aleatoria"><i class="bi bi-shuffle" aria-hidden="true"></i></button>
+            <button type="button" class="ctrl" id="prevBtn" aria-label="Pista anterior"><i class="bi bi-skip-start-fill" aria-hidden="true"></i></button>
+            <button type="button" class="ctrl ctrl-main" id="playBtn" aria-label="Reproducir"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
+            <button type="button" class="ctrl" id="nextBtn" aria-label="Pista siguiente"><i class="bi bi-skip-end-fill" aria-hidden="true"></i></button>
+            <button type="button" class="ctrl ctrl-sm d-none d-sm-grid" id="repeatBtn" aria-pressed="false" aria-label="Repetir: desactivado"><i class="bi bi-repeat" aria-hidden="true"></i></button>
+          </div>
+          <div class="player-progress d-none d-md-flex">
+            <span id="curTime">0:00</span>
+            <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Progreso de la pista">
+            <span id="durTime">0:00</span>
+          </div>
+        </div>
+        <div class="col-md-3 d-none d-md-flex justify-content-end align-items-center gap-2 player-volume">
+          <button type="button" class="ctrl ctrl-sm hee-pill" id="heeheeBtn2" data-sfx="none" aria-label="Reproducir el Hee-Hee de Michael Jackson" title="¡Hee-Hee!"><i class="bi bi-stars" aria-hidden="true"></i></button>
+          <button type="button" class="ctrl ctrl-sm" id="queueBtn" aria-label="Abrir la cola de reproducción" aria-controls="npanel"><i class="bi bi-music-note-list" aria-hidden="true"></i></button>
+          <button type="button" class="ctrl ctrl-sm" id="expandBtn" aria-label="Abrir el reproductor completo" aria-controls="npanel" aria-expanded="false"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></button>
+          <button type="button" class="ctrl" id="muteBtn" aria-label="Silenciar"><i class="bi bi-volume-up" aria-hidden="true"></i></button>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8" aria-label="Volumen">
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="npanel" id="npanel" aria-label="Reproductor completo" aria-hidden="true">
+    <div class="np-top">
+      <div class="np-tabs" role="tablist" aria-label="Secciones del reproductor">
+        <button type="button" role="tab" id="tabNow" aria-selected="true" aria-controls="npNow" data-tab="now">Ahora</button>
+        <button type="button" role="tab" id="tabQueue" aria-selected="false" aria-controls="npQueue" data-tab="queue" tabindex="-1">Cola</button>
+        <button type="button" role="tab" id="tabLib" aria-selected="false" aria-controls="npLib" data-tab="lib" tabindex="-1">Listas</button>
+      </div>
+      <button type="button" class="np-close" id="npClose" aria-label="Cerrar el reproductor completo"><i class="bi bi-chevron-down d-md-none" aria-hidden="true"></i><i class="bi bi-x-lg d-none d-md-inline" aria-hidden="true"></i></button>
+    </div>
+    <div class="np-body">
+      <section class="np-view is-on" id="npNow" role="tabpanel" aria-labelledby="tabNow"></section>
+      <section class="np-view" id="npQueue" role="tabpanel" aria-labelledby="tabQueue" hidden></section>
+      <section class="np-view" id="npLib" role="tabpanel" aria-labelledby="tabLib" hidden></section>
+    </div>
+  </aside>
+  <div class="np-backdrop" id="npBackdrop" hidden></div>
+  <div class="pl-menu" id="plMenu" role="menu" aria-label="Opciones de la canción" hidden></div>
+
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content modal-lux">
+        <div class="modal-header">
+          <h2 class="modal-title" id="cartModalLabel"><i class="bi bi-bag" aria-hidden="true"></i> Tu carrito</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar carrito"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="cart-list list-unstyled" id="cartList" aria-live="polite"></ul>
+          <p class="cart-empty" id="cartEmpty">Tu carrito está vacío. Explora la <a href="tienda.html">Tienda</a>.</p>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <p class="cart-total mb-0">Total: <strong id="cartTotal">$0</strong></p>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn-ghost-sm" id="clearCart">Vaciar</button>
+            <button type="button" class="btn-liquid btn-liquid-sm" id="checkoutBtn" data-sfx="none"><span>Finalizar compra</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content modal-lux text-center p-4">
+        <svg class="success-check" id="successCheck" viewBox="0 0 52 52" width="84" height="84" aria-hidden="true">
+          <circle cx="26" cy="26" r="24" fill="none" stroke="#d4af37" stroke-width="2"/>
+          <path d="M15 27 L23 35 L38 18" fill="none" stroke="#f4d58d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h2 class="modal-title mt-3" id="successLabel">¡Añadido!</h2>
+        <p class="mb-3 text-secondary" id="successMsg">Listo.</p>
+        <div class="d-flex gap-2 justify-content-center">
+          <button type="button" class="btn-ghost-sm" data-bs-dismiss="modal">Seguir</button>
+          <button type="button" class="btn-liquid btn-liquid-sm" id="goCart"><span>Ver carrito</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div class="toast toast-lux" id="toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-body d-flex align-items-center gap-2"><i class="bi bi-check2-circle" aria-hidden="true"></i><span id="toastMsg">Listo</span></div>
+    </div>
+  </div>
+
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/stories.js"></script>
+  <script src="js/clips.js"></script>
+  <script src="js/sfx.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
