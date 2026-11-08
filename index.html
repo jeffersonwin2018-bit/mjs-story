@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__mjReady)document.documentElement.classList.add('no-gsap')},6000);</script>
   
+  <link rel="preload" href="assets/3d/crystal-glove.glb" as="fetch" type="model/gltf-binary" crossorigin>
 </head>
 <body data-page="index.html">
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
@@ -54,7 +55,7 @@
   </header>
 
   <div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="Bienvenida a MJ's Story">
-    <div class="vbg vbg-intro" data-video data-start="0" data-end="0" style="background-image:url('assets/video/web/poster-intro.jpg')" role="presentation"><video muted playsinline preload="none" poster="assets/video/web/poster-intro.jpg" data-src="assets/video/web/intro-montage.mp4" disablepictureinpicture aria-hidden="true" tabindex="-1"></video><div class="vbg-shade"></div><div class="vbg-grain"></div></div>
+    <div class="vbg vbg-intro" data-video data-start="0" data-end="0" style="background-image:url('assets/video/web/poster-intro.jpg')" aria-hidden="true"><video muted playsinline preload="none" poster="assets/video/web/poster-intro.jpg" data-src="assets/video/web/intro-montage.mp4" disablepictureinpicture aria-hidden="true" tabindex="-1"></video><div class="vbg-shade"></div><div class="vbg-grain"></div></div>
     <div class="intro-inner">
       <img class="intro-logo" id="introLogo" src="assets/img/mj-logo-gold.png" width="150" height="159" alt="Logo de Michael Jackson">
       <div class="intro-line" id="introLine"><i></i></div>
@@ -69,29 +70,34 @@
   </div>
 
   <main id="contenido">
-    <section id="inicio" class="stage-hero sh--right sh-home" data-stage style="--accent:#f4d58d;--pos:30% 32%;--pos-m:34% 30%" aria-labelledby="heroTitle">
-      <div class="sh-scene">
-        <div class="sh-rig">
-          <div class="sh-plane sh-back" style="background-image:url('assets/Heros/1-Principal.jpg')" aria-hidden="true"></div>
-          <div class="sh-plane sh-photo"><img class="sh-img" src="assets/Heros/1-Principal.jpg" width="1472" height="974" alt="Michael Jackson en concierto con chaqueta de lentejuelas brillantes y guante blanco" fetchpriority="high"><div class="sh-light" aria-hidden="true"></div><div class="sh-sheen" aria-hidden="true"></div></div>
-          <div class="sh-plane sh-fx" aria-hidden="true"><div class="sh-beam"></div><canvas class="dust"></canvas></div>
-        </div>
-      </div>
-      <div class="sh-shade" aria-hidden="true"></div>
+    <section id="inicio" class="h3d" aria-labelledby="heroTitle">
+      <canvas id="stage3d" class="h3d-canvas" tabindex="0" role="img" aria-label="Escena 3D interactiva: el guante de cristales de Michael Jackson flota sobre una pista de baile que se ilumina. Arrastra o usa las flechas para girarlo; pulsa Enter o haz clic sobre él para escuchar su Hee-Hee."></canvas>
+      <img class="h3d-poster" src="assets/img/shop/glove.webp" width="1200" height="896" alt="" aria-hidden="true">
+      <div class="h3d-vignette" aria-hidden="true"></div>
       <div class="vbg-grain" aria-hidden="true"></div>
-      <div class="sh-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      
-      <div class="container sh-copy">
-        <div class="sh-copy-in">
-          <p class="eyebrow" data-enter>The King of Pop · Experience &amp; Archive</p>
-          <h1 class="sh-title split split-gold glow-title" id="heroTitle">MJ'S STORY</h1>
-          <p class="welcome-line" data-enter><span class="wl-a">Welcome to the Michael Jackson's Story</span> <span class="wl-dash" aria-hidden="true">—</span> <em class="wl-b">Let's live the experience of the King of Pop together.</em></p>
-          <div class="d-flex flex-column flex-sm-row gap-3 hero-cta" data-enter>
-            <a href="discografia.html" class="btn-liquid"><span>Comenzar la experiencia</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-            <a href="musica.html" class="btn-ghost"><i class="bi bi-vinyl-fill me-2" aria-hidden="true"></i>Abrir MJ Music</a>
-          </div>
+      <div class="h3d-loader" id="h3dLoader" aria-hidden="true"><span>Afinando el escenario</span><b>000</b></div>
+
+      <div class="container h3d-copy">
+        <p class="eyebrow" data-enter>The King of Pop · Experience &amp; Archive</p>
+        <h1 class="sh-title split split-gold glow-title" id="heroTitle">MJ'S STORY</h1>
+        <p class="welcome-line" data-enter><span class="wl-a">Welcome to the Michael Jackson's Story</span> <span class="wl-dash" aria-hidden="true">—</span> <em class="wl-b">Let's live the experience of the King of Pop together.</em></p>
+        <div class="d-flex flex-column flex-sm-row gap-3 hero-cta" data-enter>
+          <a href="discografia.html" class="btn-liquid"><span>Comenzar la experiencia</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          <a href="musica.html" class="btn-ghost"><i class="bi bi-vinyl-fill me-2" aria-hidden="true"></i>Abrir MJ Music</a>
         </div>
       </div>
+
+      <aside class="h3d-card" aria-label="Pieza en exhibición" data-enter>
+        <p class="h3d-card-k">Pieza 001 · En exhibición</p>
+        <p class="h3d-card-t">El guante de cristales</p>
+        <p class="h3d-card-d">Motown 25, 1983: un solo guante blanco y el primer <em>moonwalk</em> televisado cambiaron el pop para siempre.</p>
+        <div class="h3d-card-a">
+          <button type="button" class="h3d-chip" id="h3dSpin" data-sfx="none"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Girar</button>
+          <a class="h3d-chip" href="tienda.html"><i class="bi bi-bag" aria-hidden="true"></i> Réplica en tienda</a>
+        </div>
+      </aside>
+
+      <p class="h3d-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i> Arrastra para girar · Toca el guante · Recorre la pista</p>
       <div class="sh-cue" aria-hidden="true"><span>Desliza</span><i></i></div>
     </section>
     <section class="stats-strip" aria-label="Datos destacados">
@@ -103,6 +109,31 @@
           <li class="col-6 col-md-3"><strong data-count="45">45</strong><span>años de carrera</span></li>
         </ul>
       </div>
+    </section>
+    <section id="escenario" class="stage-hero sh--right sh-home" data-stage style="--accent:#f4d58d;--pos:30% 32%;--pos-m:34% 30%" aria-labelledby="stageTitle">
+      <div class="sh-scene">
+        <div class="sh-rig">
+          <div class="sh-plane sh-back" style="background-image:url('assets/Heros/1-Principal.jpg')" aria-hidden="true"></div>
+          <div class="sh-plane sh-photo"><img class="sh-img" src="assets/Heros/1-Principal.jpg" width="1472" height="974" alt="Michael Jackson en concierto con chaqueta de lentejuelas brillantes y guante blanco" loading="lazy"><div class="sh-light" aria-hidden="true"></div><div class="sh-sheen" aria-hidden="true"></div></div>
+          <div class="sh-plane sh-fx" aria-hidden="true"><div class="sh-beam"></div><canvas class="dust"></canvas></div>
+        </div>
+      </div>
+      <div class="sh-shade" aria-hidden="true"></div>
+      <div class="vbg-grain" aria-hidden="true"></div>
+      <div class="sh-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      
+      <div class="container sh-copy">
+        <div class="sh-copy-in">
+          <p class="eyebrow">Del estudio al estadio</p>
+          <h2 class="sh-title split split-gold" id="stageTitle">El escenario</h2>
+          <p class="welcome-line"><span class="wl-a">Bad, Dangerous, HIStory</span> <span class="wl-dash" aria-hidden="true">—</span> <em class="wl-b">más de 10 millones de personas lo vieron en vivo.</em></p>
+          <div class="d-flex flex-column flex-sm-row gap-3 hero-cta">
+            <a href="historia.html" class="btn-liquid"><span>Recorrer su historia</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            <a href="michael.html" class="btn-ghost"><i class="bi bi-person me-2" aria-hidden="true"></i>Conocer a Michael</a>
+          </div>
+        </div>
+      </div>
+      <div class="sh-cue" aria-hidden="true"><span>Desliza</span><i></i></div>
     </section>
 
     <div class="marquee" data-dir="left" aria-hidden="true"><div class="marquee-track"><span class="marquee-item">Billie Jean<i>✦</i></span><span class="marquee-item fill">Thriller<i>✦</i></span><span class="marquee-item">Beat It<i>✦</i></span><span class="marquee-item fill">Smooth Criminal<i>✦</i></span><span class="marquee-item">Black or White<i>✦</i></span><span class="marquee-item fill">Man in the Mirror<i>✦</i></span><span class="marquee-item">Earth Song<i>✦</i></span><span class="marquee-item fill">Don&#x27;t Stop &#x27;Til You Get Enough<i>✦</i></span></div></div>
@@ -116,32 +147,32 @@
         </header>
         <div class="row g-4">
           <div class="col-12 col-md-6 col-lg-4 reveal"><a class="portal" href="musica.html" aria-label="Ir a MJ Music">
-            <div class="portal-bg" style="background-image:url('assets/img/eras/thriller/02.jpg')" role="presentation"></div>
+            <div class="portal-bg" style="background-image:url('assets/img/eras/thriller/02.jpg')" aria-hidden="true"></div>
             <span class="portal-num">NUEVO</span>
             <div class="portal-body"><h3>MJ Music</h3><p>Tu plataforma de escucha: álbumes, videoclips, listas, cola y la historia detrás de cada canción.</p><span class="portal-go">Entrar <i class="bi bi-arrow-right" aria-hidden="true"></i></span></div>
           </a></div>
           <div class="col-12 col-md-6 col-lg-4 reveal"><a class="portal" href="discografia.html" aria-label="Ir a Discografía">
-            <div class="portal-bg" style="background-image:url('assets/img/stills/rings.jpg')" role="presentation"></div>
+            <div class="portal-bg" style="background-image:url('assets/img/stills/rings.jpg')" aria-hidden="true"></div>
             <span class="portal-num">01</span>
             <div class="portal-body"><h3>Discografía</h3><p>Siete álbumes en un coverflow 3D, con la historia de cada canción y sus videoclips.</p><span class="portal-go">Entrar <i class="bi bi-arrow-right" aria-hidden="true"></i></span></div>
           </a></div>
           <div class="col-12 col-md-6 col-lg-4 reveal"><a class="portal" href="tienda.html" aria-label="Ir a Tienda">
-            <div class="portal-bg" style="background-image:url('assets/img/albums/bad.jpg')" role="presentation"></div>
+            <div class="portal-bg" style="background-image:url('assets/img/albums/bad.jpg')" aria-hidden="true"></div>
             <span class="portal-num">02</span>
             <div class="portal-body"><h3>Tienda</h3><p>Casacas, fedoras, guantes y vinilos de colección con filtros y vista rápida.</p><span class="portal-go">Entrar <i class="bi bi-arrow-right" aria-hidden="true"></i></span></div>
           </a></div>
           <div class="col-12 col-md-6 col-lg-4 reveal"><a class="portal" href="historia.html" aria-label="Ir a Historia">
-            <div class="portal-bg" style="background-image:url('assets/img/eras/thriller/04.jpg')" role="presentation"></div>
+            <div class="portal-bg" style="background-image:url('assets/img/eras/thriller/04.jpg')" aria-hidden="true"></div>
             <span class="portal-num">03</span>
             <div class="portal-body"><h3>Historia</h3><p>Ocho eras con fotografías de archivo, galería 3D y cronología: de Gary, Indiana a su legado eterno.</p><span class="portal-go">Entrar <i class="bi bi-arrow-right" aria-hidden="true"></i></span></div>
           </a></div>
           <div class="col-12 col-md-6 col-lg-4 reveal"><a class="portal" href="michael.html" aria-label="Ir a Michael">
-            <div class="portal-bg" style="background-image:url('assets/img/stills/portrait.jpg')" role="presentation"></div>
+            <div class="portal-bg" style="background-image:url('assets/img/stills/portrait.jpg')" aria-hidden="true"></div>
             <span class="portal-num">04</span>
             <div class="portal-body"><h3>Michael</h3><p>El artista, el bailarín, el innovador y el humanitario. Biografía y legado.</p><span class="portal-go">Entrar <i class="bi bi-arrow-right" aria-hidden="true"></i></span></div>
           </a></div>
           <div class="col-12 col-md-6 col-lg-4 reveal"><a class="portal" href="contacto.html" aria-label="Ir a Contacto">
-            <div class="portal-bg" style="background-image:url('assets/img/neon-mj.jpg')" role="presentation"></div>
+            <div class="portal-bg" style="background-image:url('assets/img/neon-mj.jpg')" aria-hidden="true"></div>
             <span class="portal-num">05</span>
             <div class="portal-body"><h3>Contacto</h3><p>Escríbenos, únete al Fan Club y descubre los eventos conmemorativos.</p><span class="portal-go">Entrar <i class="bi bi-arrow-right" aria-hidden="true"></i></span></div>
           </a></div>
@@ -162,7 +193,7 @@
               <div class="album-art-wrap">
                 <a class="album-sleeve-link" href="discografia.html#off-the-wall" aria-label="Ver álbum Off the Wall (1979)" tabindex="-1">
                   <div class="album-sleeve">
-                    <div class="vinyl" role="presentation"><span class="vinyl-label" style="background-image:url('assets/img/albums/off-the-wall.webp')"></span></div>
+                    <div class="vinyl" aria-hidden="true"><span class="vinyl-label" style="background-image:url('assets/img/albums/off-the-wall.webp')"></span></div>
                     <img src="assets/img/albums/off-the-wall.webp" width="400" height="400" loading="lazy" alt="Portada del álbum Off the Wall de Michael Jackson (1979)">
                   </div>
                 </a>
@@ -173,7 +204,7 @@
               <div class="album-art-wrap">
                 <a class="album-sleeve-link" href="discografia.html#thriller" aria-label="Ver álbum Thriller (1982)" tabindex="-1">
                   <div class="album-sleeve">
-                    <div class="vinyl" role="presentation"><span class="vinyl-label" style="background-image:url('assets/img/albums/thriller.jpg')"></span></div>
+                    <div class="vinyl" aria-hidden="true"><span class="vinyl-label" style="background-image:url('assets/img/albums/thriller.jpg')"></span></div>
                     <img src="assets/img/albums/thriller.jpg" width="400" height="400" loading="lazy" alt="Portada del álbum Thriller de Michael Jackson (1982)">
                   </div>
                 </a>
@@ -184,7 +215,7 @@
               <div class="album-art-wrap">
                 <a class="album-sleeve-link" href="discografia.html#bad" aria-label="Ver álbum Bad (1987)" tabindex="-1">
                   <div class="album-sleeve">
-                    <div class="vinyl" role="presentation"><span class="vinyl-label" style="background-image:url('assets/img/albums/bad.jpg')"></span></div>
+                    <div class="vinyl" aria-hidden="true"><span class="vinyl-label" style="background-image:url('assets/img/albums/bad.jpg')"></span></div>
                     <img src="assets/img/albums/bad.jpg" width="400" height="400" loading="lazy" alt="Portada del álbum Bad de Michael Jackson (1987)">
                   </div>
                 </a>
@@ -195,7 +226,7 @@
               <div class="album-art-wrap">
                 <a class="album-sleeve-link" href="discografia.html#dangerous" aria-label="Ver álbum Dangerous (1991)" tabindex="-1">
                   <div class="album-sleeve">
-                    <div class="vinyl" role="presentation"><span class="vinyl-label" style="background-image:url('assets/img/albums/dangerous.jpg')"></span></div>
+                    <div class="vinyl" aria-hidden="true"><span class="vinyl-label" style="background-image:url('assets/img/albums/dangerous.jpg')"></span></div>
                     <img src="assets/img/albums/dangerous.jpg" width="400" height="400" loading="lazy" alt="Portada del álbum Dangerous de Michael Jackson (1991)">
                   </div>
                 </a>
@@ -206,7 +237,7 @@
               <div class="album-art-wrap">
                 <a class="album-sleeve-link" href="discografia.html#history" aria-label="Ver álbum HIStory (1995)" tabindex="-1">
                   <div class="album-sleeve">
-                    <div class="vinyl" role="presentation"><span class="vinyl-label" style="background-image:url('assets/img/albums/history.jpg')"></span></div>
+                    <div class="vinyl" aria-hidden="true"><span class="vinyl-label" style="background-image:url('assets/img/albums/history.jpg')"></span></div>
                     <img src="assets/img/albums/history.jpg" width="400" height="400" loading="lazy" alt="Portada del álbum HIStory de Michael Jackson (1995)">
                   </div>
                 </a>
@@ -217,7 +248,7 @@
               <div class="album-art-wrap">
                 <a class="album-sleeve-link" href="discografia.html#invincible" aria-label="Ver álbum Invincible (2001)" tabindex="-1">
                   <div class="album-sleeve">
-                    <div class="vinyl" role="presentation"><span class="vinyl-label" style="background-image:url('assets/img/albums/invincible.jpg')"></span></div>
+                    <div class="vinyl" aria-hidden="true"><span class="vinyl-label" style="background-image:url('assets/img/albums/invincible.jpg')"></span></div>
                     <img src="assets/img/albums/invincible.jpg" width="400" height="400" loading="lazy" alt="Portada del álbum Invincible de Michael Jackson (2001)">
                   </div>
                 </a>
@@ -228,7 +259,7 @@
               <div class="album-art-wrap">
                 <a class="album-sleeve-link" href="discografia.html#xscape" aria-label="Ver álbum Xscape (2014)" tabindex="-1">
                   <div class="album-sleeve">
-                    <div class="vinyl" role="presentation"><span class="vinyl-label" style="background-image:url('assets/img/albums/xscape.jpg')"></span></div>
+                    <div class="vinyl" aria-hidden="true"><span class="vinyl-label" style="background-image:url('assets/img/albums/xscape.jpg')"></span></div>
                     <img src="assets/img/albums/xscape.jpg" width="400" height="400" loading="lazy" alt="Portada del álbum Xscape de Michael Jackson (2014)">
                   </div>
                 </a>
@@ -288,7 +319,7 @@
     </section>
 
     <section class="band" aria-label="Declaración">
-      <div class="band-bg" data-parallax="0.2" style="background-image:url('assets/img/neon-mj.jpg')" role="presentation"></div>
+      <div class="band-bg" data-parallax="0.2" style="background-image:url('assets/img/neon-mj.jpg')" aria-hidden="true"></div>
       <div class="container">
         <blockquote class="reveal"><p class="mb-0">No hizo música para su época. <em>La hizo para todas.</em></p><cite>Archivo MJ's Story</cite></blockquote>
       </div>
@@ -297,7 +328,7 @@
     <div class="marquee" data-dir="right" aria-hidden="true"><div class="marquee-track"><span class="marquee-item">The King of Pop<i>✦</i></span><span class="marquee-item fill">Moonwalk<i>✦</i></span><span class="marquee-item">Heal the World<i>✦</i></span><span class="marquee-item fill">Off the Wall<i>✦</i></span><span class="marquee-item">Dangerous<i>✦</i></span><span class="marquee-item fill">HIStory<i>✦</i></span><span class="marquee-item">Invincible<i>✦</i></span></div></div>
     
     <section class="ambient" aria-label="Brilla como un guante de cristal">
-      <div class="ambient-bg" style="background-image:url('assets/img/heroes/michael-script-blur.jpg')" role="presentation"></div>
+      <div class="ambient-bg" style="background-image:url('assets/img/heroes/michael-script-blur.jpg')" aria-hidden="true"></div>
       <figure class="ambient-fig"><img src="assets/img/heroes/michael-script.jpg" loading="lazy" alt="Michael Jackson sonriendo con un guante de cristales sobre los ojos, junto a la firma «Michael» en dorado"></figure>
       <div class="container ambient-copy">
         <p class="eyebrow reveal">Brillo</p>
@@ -482,5 +513,7 @@
   <script src="js/clips.js"></script>
   <script src="js/sfx.js"></script>
   <script src="js/main.js"></script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="js/hero3d.js"></script>
 </body>
 </html>
