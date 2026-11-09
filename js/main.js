@@ -712,7 +712,7 @@
   /* ----- Historias y videoclips por canción ----- */
   const SLUG = window.MJ_SLUG || ((t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, '-'));
   const STORIES = window.MJ_STORIES || {}, CLIPS = window.MJ_CLIPS || {};
-  const ERA_OF = { 'off-the-wall': 'off-the-wall', thriller: 'thriller', bad: 'bad', dangerous: 'dangerous-history', history: 'dangerous-history', invincible: 'invincible', xscape: 'xscape' };
+  const ERA_OF = { 'off-the-wall': 'off-the-wall', thriller: 'thriller', bad: 'bad', dangerous: 'dangerous-history', history: 'dangerous-history', 'blood-on-the-dance-floor': 'invincible', invincible: 'invincible', xscape: 'xscape' };
   const slugOf = (t) => SLUG(t.title);
   const clipOf = (t) => (t && CLIPS[slugOf(t)]) || null;
   const storyOf = (t) => (t && STORIES[slugOf(t)]) || null;

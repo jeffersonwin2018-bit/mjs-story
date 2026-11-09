@@ -700,6 +700,135 @@ window.MJ_ALBUMS = [
   ]
  },
  {
+  "id": "blood-on-the-dance-floor",
+  "title": "Blood on the Dance Floor",
+  "year": 1997,
+  "date": "Mayo de 1997",
+  "label": "Epic Records",
+  "color": "#b3122e",
+  "cover": "assets/img/albums/blood-on-the-dance-floor.jpg",
+  "wide": "",
+  "producer": "Michael Jackson, Teddy Riley, Jimmy Jam y Terry Lewis",
+  "blurb": "Cinco canciones nuevas, oscuras y afiladas, más ocho remezclas de HIStory para la pista de baile. Publicado en plena HIStory World Tour, es el álbum de remezclas más vendido de la historia.",
+  "tags": [
+   "New jack swing",
+   "Industrial",
+   "Dance",
+   "Remix"
+  ],
+  "facts": [
+   [
+    "6M+",
+    "copias (est.)"
+   ],
+   [
+    "1.º",
+    "álbum de remezclas más vendido"
+   ],
+   [
+    "N.º 1",
+    "en el Reino Unido"
+   ]
+  ],
+  "singles": [
+   [
+    "Blood on the Dance Floor",
+    "1997",
+    "Número 1 en el Reino Unido: new jack swing afilado junto a Teddy Riley."
+   ],
+   [
+    "HIStory / Ghosts",
+    "1997",
+    "Doble cara A ligada al cortometraje de terror Ghosts."
+   ],
+   [
+    "Is It Scary",
+    "1997",
+    "Sencillo promocional que juega con su imagen pública y el miedo."
+   ]
+  ],
+  "tracks": [
+   {
+    "title": "Blood on the Dance Floor",
+    "single": true,
+    "dur": 253,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Blood%20on%20the%20Dance%20Floor_spotdown.org.mp3"
+   },
+   {
+    "title": "Morphine",
+    "single": false,
+    "dur": 388,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Morphine_spotdown.org.mp3"
+   },
+   {
+    "title": "Superfly Sister",
+    "single": false,
+    "dur": 387,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Superfly%20Sister_spotdown.org.mp3"
+   },
+   {
+    "title": "Ghosts",
+    "single": true,
+    "dur": 312,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Ghosts_spotdown.org.mp3"
+   },
+   {
+    "title": "Is It Scary",
+    "single": true,
+    "dur": 335,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Is%20It%20Scary_spotdown.org.mp3"
+   },
+   {
+    "title": "Scream Louder (Flyte Tyme Remix)",
+    "single": false,
+    "dur": 327,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Scream%20Louder%20-%20Flyte%20Tyme%20Remix_spotdown.org.mp3"
+   },
+   {
+    "title": "Money (Fire Island Radio Edit)",
+    "single": false,
+    "dur": 262,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Money%20-%20Fire%20Island%20Radio%20Edit_spotdown.org.mp3"
+   },
+   {
+    "title": "2 Bad (Refugee Camp Mix)",
+    "single": false,
+    "dur": 212,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/2%20Bad%20-%20Refugee%20Camp%20Mix_spotdown.org.mp3"
+   },
+   {
+    "title": "Stranger in Moscow (Tee's In-House Club Mix)",
+    "single": false,
+    "dur": 414,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Stranger%20in%20Moscow%20-%20Tee%27s%20In-House%20Club%20Mix_spotdown.org.mp3"
+   },
+   {
+    "title": "This Time Around (D.M. Radio Mix)",
+    "single": false,
+    "dur": 245,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/This%20Time%20Around%20-%20D.M.%20Radio%20Mix_spotdown.org.mp3"
+   },
+   {
+    "title": "Earth Song (Hani's Club Experience)",
+    "single": false,
+    "dur": 475,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/Earth%20Song%20-%20Hani%27s%20Club%20Experience_spotdown.org.mp3"
+   },
+   {
+    "title": "You Are Not Alone (Classic Club Mix)",
+    "single": false,
+    "dur": 457,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/You%20Are%20Not%20Alone%20-%20Classic%20Club%20Mix_spotdown.org.mp3"
+   },
+   {
+    "title": "HIStory (Tony Moran's HIStory Lesson)",
+    "single": true,
+    "dur": 481,
+    "src": "assets/audio/Blood%20on%20the%20Dance%20Floor/History%20-%20Tony%20Moran%27s%20HIStory%20Lesson_spotdown.org.mp3"
+   }
+  ]
+ },
+ {
   "id": "invincible",
   "title": "Invincible",
   "year": 2001,
